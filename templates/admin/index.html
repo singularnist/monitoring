@@ -1,0 +1,11 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+<div class="container">
+    <h2>Welcome to Flask Admin</h2>
+    
+    {% if custom_button %}
+        <a href="{{ url_for('/admin') }}" class="btn btn-primary">Моя кнопка</a>
+    {% endif %}>
+</div>
+{% endblock %}
