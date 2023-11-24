@@ -1,0 +1,13 @@
+python-dotenv==0.21.1
+SQLAlchemy==2.0.20
+aiosnmp==0.7.2
+Flask==2.2.5
+Flask_Admin==1.6.1
+Flask_JSONRPC==2.2.2
+Flask_Login==0.6.2
+flask_sqlalchemy==3.0.5
+PyMySQL==1.1.0
+importlib_metadata==4.13.0
+pymysql==1.1.0
+schedule==1.2.1
+Flask_babel==3.1.0

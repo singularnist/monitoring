@@ -1,0 +1,8 @@
+host = '192.168.33.1'
+user = 'user_shop'
+user_test ='bear'
+password = 'user_shop'
+password_test = 'test'
+db_name = 'sw_1_1_1'
+db_name1 = 'monitoring'
+db_name2 = ''
