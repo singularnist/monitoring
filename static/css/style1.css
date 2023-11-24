@@ -1,0 +1,180 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  background-image: url(../images/fon_dark2.jpg);
+  background-attachment: fixed;
+  background-repeat: repeat-y;
+  background-color: rgb(221, 221, 221);
+  color: rgb(255, 255, 255);
+}
+
+.header a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+/* .sw_off{} */
+
+.header a {
+  text-decoration: none;
+  font-size: 20px;
+  text-shadow: 2px 2px 6px rgb(255, 255, 255);
+}
+
+.header-text h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.full{
+  max-width: 1380px;
+  margin: 0% auto;
+}
+.header {
+  max-width: 1280px;
+  /* margin-left: 8%;
+  margin-right: 8%; */
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-size: cover;
+  background-position: center;
+  color: black;
+}
+.header ul{
+  margin-left: -20%;
+}
+
+
+.header nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.header nav ul li {
+  
+  padding-left: 30px;
+  margin-left: 10px;
+}
+
+.header-text {
+  display: flex;
+  align-items: center;
+}
+.header a {
+  text-decoration: none;
+  font-size: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.header-text h1 {
+  font-size: 32px;
+  color: black;
+  margin: 0;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* jura-regular - cyrillic-ext */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/jura-v24-cyrillic-ext-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/jura-v24-cyrillic-ext-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* jura-500 - cyrillic-ext */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/jura-v24-cyrillic-ext-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/jura-v24-cyrillic-ext-500.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  html {
+    background-image: url(fon_dark2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  table.vn {
+    font-family:"Arial", Courier, monospace; 
+    font-size:90%;
+    color: white;
+    margin-top: 0.5%;
+    margin-left: 2%;
+    border-collapse: collapse;
+  }   TD, TH {
+    
+    padding: 1px;
+    border: 1px solid rgb(164, 164, 164);
+    
+   }
+
+
+   a {
+    text-decoration:none; color: rgb(255, 255, 255);
+   }
+
+   a.nc {
+    text-decoration:none; color: rgb(78, 240, 255);
+   }
+   table.km {
+
+    font-family:"Arial", Courier, monospace; 
+    font-size:90%;
+    color: white;
+    margin-top: 0.5%;
+    margin-left: 2%;
+    border-collapse: collapse;
+  }
