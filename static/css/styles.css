@@ -1,0 +1,171 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    background-image: url(../images/fon_dark2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-color: rgb(221, 221, 221);
+    color: rgb(255, 255, 255);
+}
+
+.header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* .sw_off{} */
+
+.header a {
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 2px 2px 6px rgb(255, 255, 255);
+}
+
+.header-text h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.full{
+    max-width: 1380px;
+    margin: 0% auto;
+}
+.header {
+    max-width: 1280px;
+    /* margin-left: 8%;
+    margin-right: 8%; */
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+.header ul{
+    margin-left: -20%;
+}
+
+
+.header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.header nav ul li {
+    
+    padding-left: 30px;
+    margin-left: 10px;
+}
+
+.header-text {
+    display: flex;
+    align-items: center;
+}
+.header a {
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.header-text h1 {
+    font-size: 32px;
+    color: black;
+    margin: 0;
+}
+
+TD, TH {
+    width: 250px;
+    padding: 3px;
+    border: 1px solid rgb(164, 164, 164);
+    
+   }
+
+   .information {
+    display: flex;
+    justify-content: space-between;
+}
+.down{
+    color: rgb(255, 0, 0);
+} 
+.vn, .conteiner_cicle {
+    flex: 1;
+} 
+.km, .conteiner_cicle {
+    flex: 1;
+} 
+.conteiner_cicle{
+    float: right;
+}
+.circle {
+    display: block;
+    float: left;
+}
+circle {
+  fill: rgba(0,0,0,0);
+  stroke: rgb(252, 80, 80);
+  stroke-width: 25;
+  stroke-dasharray: 408px 408px;
+}
+circle:nth-child(2n) {
+  fill: rgba(0,0,0,0);
+  stroke: #6af84e;
+  stroke-width: 25;
+}
+input {
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0); /* RGBA колір з нульовою прозорістю (прозорий фон) */
+    border: 1px solid #ccc; /* Обводка */
+    color: rgb(255, 255, 255); /* Колір тексту */
+    border-color: #42f9ffc7;
+    box-shadow: 0 0 5px rgb(9, 226, 255);
+  }
+
+ input.bot{
+    width: 156px;
+ } 
+
+select{
+    width: 155px;
+    background-color: rgba(255, 255, 255, 0); /* RGBA колір з нульовою прозорістю (прозорий фон) */
+    border: 1px solid #ccc; /* Обводка */
+    color: rgb(255, 255, 255); /* Колір тексту */
+    border-color: #42f9ffc7;
+    box-shadow: 0 0 5px rgb(9, 226, 255);
+}
+select option {
+    width: 150px;
+    background-color: black; /* RGBA колір з нульовою прозорістю (прозорий фон) */
+    border: 1px solid #ccc; /* Обводка */
+    color: rgb(255, 255, 255); /* Колір тексту */
+    border-color: #42f9ffc7;
+    box-shadow: 0 0 5px rgb(9, 226, 255);
+}
