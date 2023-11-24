@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../static/images/favicon (1).ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Вимкнені</title>
+    <script>
+        function reloadPage() {
+            location.reload();
+        }
+        setTimeout(reloadPage, 60000);
+    </script>
+</head>
+<body>
+<div class="full">
+    <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="/">Головна</a></li>
+                    <li><a href="/sw_off_page">Вимкнені комутатори</a></li>
+                    <li><a href="/all">Всі подіЇ</a></li>
+                    <li><a href="/power">Живлення</a></li>
+                    <li><a href="/login">Адмін</a></li>
+                </ul>
+            </nav>
+        </div>
+        <input type="text" id="filterInput" placeholder="Фільтр">
+        <table id="myTable">
+            <tr>
+                <td>Дата</td>
+                <td>Комутотор</td>
+                <td>Адреса</td>
+                <td>Увімкнувся</td>
+                <td style="width:20px;">УПС</td>
+                <td style="width:20px;">Викл</td>
+                <td>Виконавець</td>
+                <td>Проблема</td>
+                <td>Робота</td>
+                <td>Примітки</td>
+            </tr>
+            <tr class="article-row">
+                {% for el in articles%}
+                <td>{{ el.sw_off.split(' ')[0] }} <span style="color: red;">{{ el.sw_off.split(' ')[1] }}</span></td>
+                <td>{{ el.sw }}</td>
+                <td>{{ el.addres }}</td>
+                <td>{{ el.sw_on }}</td>
+                <td style="width: 20px; text-align: center;">{{ el.ups_live }}</td>
+                <td style="width: 20px; text-align: center;">{{ el.sw_down_time }}</td>
+                <td>
+                    <form method="POST" action="/edit/{{ el.ID }}/man">
+                        <select name="new_man">
+                            {% for man in mans %}
+                            <option value="{{ man.man }}" {% if man.man == el.man %}selected{% endif %}>{{ man.man }}</option>
+                            {% endfor %}
+                        </select>
+                        <input class="bot" type="submit" value="    ✅  ">
+                    </form>
+                </td>
+                <td>
+                    <form method="POST" action="/edit/{{ el.ID }}/problem">
+                        <select name="new_problem">
+                            {% for problem in problems %}
+                            <option value="{{ problem.problem }}" {% if problem.problem == el.problem %}selected{% endif %}>{{ problem.problem }}</option>
+                            {% endfor %}
+                        </select>
+                        <input class="bot" type="submit" value="    ✅  ">
+                    </form>
+                </td>
+                <td>
+                    <form method="POST" action="/edit/{{ el.ID }}/doing">
+                        <select name="new_doing">
+                            {% for doing in doings %}
+                            <option value="{{ doing.doing }}" {% if doing.doing ==el.doing %}selected{% endif %}>{{ doing.doing }}</option>
+                            {% endfor %}
+                        </select>
+                        <input class="bot" type="submit" value="    ✅  ">
+                    </form>
+                </td>
+                <td>
+                    <form method="POST" action="/edit/{{ el.ID }}/comments">
+                        <input type="text" name="new_comments" value="{{ el.comments }}">
+                        <input class="bot" type="submit" value="    ✅  ">
+                    </form>
+                </td>
+            </tr>
+                {% endfor %}
+        </table>
+
+    </div>
+    <script>
+        // Отримуємо таблицю і поле вводу
+        var table = document.getElementById("myTable");
+        var input = document.getElementById("filterInput");
+      
+        // Додаємо подію "input" до поля вводу
+        input.addEventListener("input", function () {
+          var filterText = input.value.toLowerCase(); // Отримуємо текст фільтра та переводимо його в нижній регістр
+      
+          // Отримуємо всі рядки таблиці
+          var rows = table.getElementsByTagName("tr");
+      
+          // Проходимося по кожному рядку, починаючи з другого (індекс 1)
+          for (var i = 1; i < rows.length; i++) {
+            var row = rows[i];
+            var cells = row.getElementsByTagName("td");
+            var match = false;
+      
+            // Проходимося по кожній комірці рядка
+            for (var j = 0; j < cells.length; j++) {
+              var cell = cells[j];
+              var cellText = cell.textContent.toLowerCase(); // Отримуємо текст комірки та переводимо його в нижній регістр
+              if (cellText.includes(filterText)) {
+                match = true;
+                break;
+              }
+            }
+      
+            // Показуємо або приховуємо рядок в залежності від результату фільтрації
+            if (match) {
+              row.style.display = "";
+            } else {
+              row.style.display = "none";
+            }
+          }
+        });
+      </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../static/images/favicon (1).ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Головна</title>
+    <script>
+        function reloadPage() {
+            location.reload();
+        }
+        setTimeout(reloadPage, 60000);
+    </script>
+    <style>
+        .inner-div{
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="full">
+    <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="/">Головна</a></li>
+                    <li><a href="/sw_off_page">Вимкнені комутатори</a></li>
+                    <li><a href="/all">Всі подіЇ</a></li>
+                    <li><a href="/power">Живлення</a></li>
+                    <li><a href="/login">Адмін</a></li>
+                    
+                </ul>
+            </nav>
+    </div>
+    <div class="information">
+        <div class="vn" style="display: flex; ">
+            <div class="inner-div" style="width: 30%; padding-left: 8%;">
+                <h1 style="font-size: 160%; padding-top: 8%;">Комутатори Вінниця {{row_count}}</h1>
+                <h1 style="font-size: 120%;" >Вимкнених <h1 class="down" style="font-size: 120%;">{{with_stat_0}}</h1>
+            </div>
+            <div class="inner-div" style="width: 70%; margin: 0 auto; float: right;">
+                {{ plot | safe  }}
+             </div>
+        </div>
+    </div>
+    <div class="information">
+        <div class="vn" style="display: flex; ">
+            <div class="inner-div" style="width: 30%; padding-left: 8%;">
+                <h1 style="font-size: 160%; padding-top: 8%;">Комутатори Хмельницький {В процесі}</h1>
+                <h1 style="font-size: 120%;" >Вимкнених <h1 class="down" style="font-size: 120%;">В процесі</h1>
+            </div>
+            <div class="inner-div" style="width: 70%; margin: 0 auto; float: right;">
+                {{ plot_km | safe  }}
+             </div>
+        </div>
+    </div>
+</div>
+    <!-- <script>
+        var Circle = function(sel){
+        var circles = document.querySelectorAll(sel);
+        [].forEach.call(circles,function(el){
+            var valEl = parseFloat(el.innerHTML);
+            valEl = valEl*408/100;
+            el.innerHTML = '<svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray:'+valEl+'px 408px;" r="65" cx="-80" cy="80" /></svg>';
+        });
+    };
+    Circle('.circle');
+    </script> -->
+
+</div>
+</body>
+</html>
